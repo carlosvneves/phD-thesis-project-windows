@@ -1,0 +1,207 @@
+\hypertarget{classts__models_1_1_t_s___models}{}\doxysection{ts\+\_\+models.\+T\+S\+\_\+\+Models Class Reference}
+\label{classts__models_1_1_t_s___models}\index{ts\_models.TS\_Models@{ts\_models.TS\_Models}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classts__models_1_1_t_s___models_a1a12389d931e15ef474f6330f44a52c9}{plot\+\_\+series}} (self, train\+\_\+date, train, test\+\_\+date, test, name)
+\begin{DoxyCompactList}\small\item\em P\+L\+O\+T\+T\+I\+NG U\+T\+I\+L\+I\+TY F\+U\+N\+C\+T\+I\+O\+NS \#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classts__models_1_1_t_s___models_a08820303fd3c7301e56743dae1630854}{plot\+\_\+autocor}} (self, name, df)
+\item 
+\mbox{\Hypertarget{classts__models_1_1_t_s___models_a1d8603e2d96147b448d28970ca45ce95}\label{classts__models_1_1_t_s___models_a1d8603e2d96147b448d28970ca45ce95}} 
+def {\bfseries A\+R\+I\+MA} (self, data)
+\item 
+def \mbox{\hyperlink{classts__models_1_1_t_s___models_ae59a519b5cedc7f0332c938338eda0aa}{V\+AR}} (self, data\+\_\+diff, best\+\_\+order)
+\item 
+def \mbox{\hyperlink{classts__models_1_1_t_s___models_aed41676e0bbe54731d1da4ff66133557}{adf\+\_\+test}} (self, series, title=\textquotesingle{}\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classts__models_1_1_t_s___models_a117777eba9f620b54f458ea66b505c88}{V\+A\+R\+\_\+bestorder}} (self, data\+\_\+diff, max\+\_\+order=5)
+\item 
+def \mbox{\hyperlink{classts__models_1_1_t_s___models_a195809bd2179b591e1f0a64ad8ca10c9}{retrive\+\_\+\+A\+R\+I\+M\+A\+\_\+prediction}} (self, arima\+\_\+result, period, steps)
+\begin{DoxyCompactList}\small\item\em U\+T\+I\+L\+I\+TY F\+U\+N\+C\+T\+I\+ON F\+OR R\+E\+T\+R\+I\+VE V\+AR P\+R\+E\+D\+I\+C\+T\+I\+O\+NS \#\#\#. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classts__models_1_1_t_s___models_a6d85af4fc7c604c359fbd70ab9dc7888}{retrive\+\_\+\+V\+A\+R\+\_\+prediction}} (self, var\+\_\+result, period, prior, prior\+\_\+init, steps)
+\begin{DoxyCompactList}\small\item\em U\+T\+I\+L\+I\+TY F\+U\+N\+C\+T\+I\+ON F\+OR R\+E\+T\+R\+I\+VE V\+AR P\+R\+E\+D\+I\+C\+T\+I\+O\+NS \#\#\#. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 12 of file ts\+\_\+models.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classts__models_1_1_t_s___models_aed41676e0bbe54731d1da4ff66133557}\label{classts__models_1_1_t_s___models_aed41676e0bbe54731d1da4ff66133557}} 
+\index{ts\_models.TS\_Models@{ts\_models.TS\_Models}!adf\_test@{adf\_test}}
+\index{adf\_test@{adf\_test}!ts\_models.TS\_Models@{ts\_models.TS\_Models}}
+\doxysubsubsection{\texorpdfstring{adf\_test()}{adf\_test()}}
+{\footnotesize\ttfamily def ts\+\_\+models.\+T\+S\+\_\+\+Models.\+adf\+\_\+test (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{series,  }\item[{}]{title = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Pass in a time series and an optional title, returns an ADF report
+\end{DoxyVerb}
+ 
+
+Definition at line 123 of file ts\+\_\+models.\+py.
+
+\mbox{\Hypertarget{classts__models_1_1_t_s___models_a08820303fd3c7301e56743dae1630854}\label{classts__models_1_1_t_s___models_a08820303fd3c7301e56743dae1630854}} 
+\index{ts\_models.TS\_Models@{ts\_models.TS\_Models}!plot\_autocor@{plot\_autocor}}
+\index{plot\_autocor@{plot\_autocor}!ts\_models.TS\_Models@{ts\_models.TS\_Models}}
+\doxysubsubsection{\texorpdfstring{plot\_autocor()}{plot\_autocor()}}
+{\footnotesize\ttfamily def ts\+\_\+models.\+T\+S\+\_\+\+Models.\+plot\+\_\+autocor (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name,  }\item[{}]{df }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+name : TYPE
+    DESCRIPTION.
+df : TYPE
+    DESCRIPTION.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ 
+
+Definition at line 48 of file ts\+\_\+models.\+py.
+
+\mbox{\Hypertarget{classts__models_1_1_t_s___models_a1a12389d931e15ef474f6330f44a52c9}\label{classts__models_1_1_t_s___models_a1a12389d931e15ef474f6330f44a52c9}} 
+\index{ts\_models.TS\_Models@{ts\_models.TS\_Models}!plot\_series@{plot\_series}}
+\index{plot\_series@{plot\_series}!ts\_models.TS\_Models@{ts\_models.TS\_Models}}
+\doxysubsubsection{\texorpdfstring{plot\_series()}{plot\_series()}}
+{\footnotesize\ttfamily def ts\+\_\+models.\+T\+S\+\_\+\+Models.\+plot\+\_\+series (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{train\+\_\+date,  }\item[{}]{train,  }\item[{}]{test\+\_\+date,  }\item[{}]{test,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+P\+L\+O\+T\+T\+I\+NG U\+T\+I\+L\+I\+TY F\+U\+N\+C\+T\+I\+O\+NS \#\#\#. 
+
+\begin{DoxyVerb}Parameters
+----------
+train_date : TYPE
+    DESCRIPTION.
+train : TYPE
+    DESCRIPTION.
+test_date : TYPE
+    DESCRIPTION.
+test : TYPE
+    DESCRIPTION.
+name : TYPE
+    DESCRIPTION.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ 
+
+Definition at line 16 of file ts\+\_\+models.\+py.
+
+\mbox{\Hypertarget{classts__models_1_1_t_s___models_a195809bd2179b591e1f0a64ad8ca10c9}\label{classts__models_1_1_t_s___models_a195809bd2179b591e1f0a64ad8ca10c9}} 
+\index{ts\_models.TS\_Models@{ts\_models.TS\_Models}!retrive\_ARIMA\_prediction@{retrive\_ARIMA\_prediction}}
+\index{retrive\_ARIMA\_prediction@{retrive\_ARIMA\_prediction}!ts\_models.TS\_Models@{ts\_models.TS\_Models}}
+\doxysubsubsection{\texorpdfstring{retrive\_ARIMA\_prediction()}{retrive\_ARIMA\_prediction()}}
+{\footnotesize\ttfamily def ts\+\_\+models.\+T\+S\+\_\+\+Models.\+retrive\+\_\+\+A\+R\+I\+M\+A\+\_\+prediction (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{arima\+\_\+result,  }\item[{}]{period,  }\item[{}]{steps }\end{DoxyParamCaption})}
+
+
+
+U\+T\+I\+L\+I\+TY F\+U\+N\+C\+T\+I\+ON F\+OR R\+E\+T\+R\+I\+VE V\+AR P\+R\+E\+D\+I\+C\+T\+I\+O\+NS \#\#\#. 
+
+\begin{DoxyVerb}Parameters
+----------
+var_result : TYPE
+    DESCRIPTION.
+period : TYPE
+    DESCRIPTION.
+prior : TYPE
+    DESCRIPTION.
+prior_init : TYPE
+    DESCRIPTION.
+steps : TYPE
+    DESCRIPTION.
+
+Returns
+-------
+final_pred : TYPE
+    DESCRIPTION.\end{DoxyVerb}
+ 
+
+Definition at line 198 of file ts\+\_\+models.\+py.
+
+\mbox{\Hypertarget{classts__models_1_1_t_s___models_a6d85af4fc7c604c359fbd70ab9dc7888}\label{classts__models_1_1_t_s___models_a6d85af4fc7c604c359fbd70ab9dc7888}} 
+\index{ts\_models.TS\_Models@{ts\_models.TS\_Models}!retrive\_VAR\_prediction@{retrive\_VAR\_prediction}}
+\index{retrive\_VAR\_prediction@{retrive\_VAR\_prediction}!ts\_models.TS\_Models@{ts\_models.TS\_Models}}
+\doxysubsubsection{\texorpdfstring{retrive\_VAR\_prediction()}{retrive\_VAR\_prediction()}}
+{\footnotesize\ttfamily def ts\+\_\+models.\+T\+S\+\_\+\+Models.\+retrive\+\_\+\+V\+A\+R\+\_\+prediction (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{var\+\_\+result,  }\item[{}]{period,  }\item[{}]{prior,  }\item[{}]{prior\+\_\+init,  }\item[{}]{steps }\end{DoxyParamCaption})}
+
+
+
+U\+T\+I\+L\+I\+TY F\+U\+N\+C\+T\+I\+ON F\+OR R\+E\+T\+R\+I\+VE V\+AR P\+R\+E\+D\+I\+C\+T\+I\+O\+NS \#\#\#. 
+
+\begin{DoxyVerb}Parameters
+----------
+var_result : TYPE
+    DESCRIPTION.
+period : TYPE
+    DESCRIPTION.
+prior : TYPE
+    DESCRIPTION.
+prior_init : TYPE
+    DESCRIPTION.
+steps : TYPE
+    DESCRIPTION.
+
+Returns
+-------
+final_pred : TYPE
+    DESCRIPTION.\end{DoxyVerb}
+ 
+
+Definition at line 245 of file ts\+\_\+models.\+py.
+
+\mbox{\Hypertarget{classts__models_1_1_t_s___models_ae59a519b5cedc7f0332c938338eda0aa}\label{classts__models_1_1_t_s___models_ae59a519b5cedc7f0332c938338eda0aa}} 
+\index{ts\_models.TS\_Models@{ts\_models.TS\_Models}!VAR@{VAR}}
+\index{VAR@{VAR}!ts\_models.TS\_Models@{ts\_models.TS\_Models}}
+\doxysubsubsection{\texorpdfstring{VAR()}{VAR()}}
+{\footnotesize\ttfamily def ts\+\_\+models.\+T\+S\+\_\+\+Models.\+V\+AR (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data\+\_\+diff,  }\item[{}]{best\+\_\+order }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+data_diff : TYPE
+    DESCRIPTION.
+best_order : TYPE
+    DESCRIPTION.
+
+Returns
+-------
+var : TYPE
+    DESCRIPTION.
+var_result : TYPE
+    DESCRIPTION.\end{DoxyVerb}
+ 
+
+Definition at line 92 of file ts\+\_\+models.\+py.
+
+\mbox{\Hypertarget{classts__models_1_1_t_s___models_a117777eba9f620b54f458ea66b505c88}\label{classts__models_1_1_t_s___models_a117777eba9f620b54f458ea66b505c88}} 
+\index{ts\_models.TS\_Models@{ts\_models.TS\_Models}!VAR\_bestorder@{VAR\_bestorder}}
+\index{VAR\_bestorder@{VAR\_bestorder}!ts\_models.TS\_Models@{ts\_models.TS\_Models}}
+\doxysubsubsection{\texorpdfstring{VAR\_bestorder()}{VAR\_bestorder()}}
+{\footnotesize\ttfamily def ts\+\_\+models.\+T\+S\+\_\+\+Models.\+V\+A\+R\+\_\+bestorder (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data\+\_\+diff,  }\item[{}]{max\+\_\+order = {\ttfamily 5} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+data_diff : TYPE
+    DESCRIPTION.
+max_order : TYPE, optional
+    DESCRIPTION. The default is 10.
+
+Returns
+-------
+best_order : TYPE
+    DESCRIPTION.
+best_aic : TYPE
+    DESCRIPTION.\end{DoxyVerb}
+ 
+
+Definition at line 147 of file ts\+\_\+models.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/ts\+\_\+models.\+py\end{DoxyCompactItemize}

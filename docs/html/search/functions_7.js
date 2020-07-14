@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['run_5fgrid_5fsearch',['run_grid_search',['../classsimulator_1_1Simulator.html#ab35b39d33345b7da4bc856a1b9d81a0a',1,'simulator::Simulator']]],
-  ['run_5fsimulation',['run_simulation',['../classsimulator_1_1Simulator.html#ae52bd7608ecf01ac5e426e8491d9ec44',1,'simulator::Simulator']]]
+  ['load_5fbest_5fmodel_57',['load_best_model',['../classsimulator_1_1_simulator.html#a9c33239232dc29a9a084fb57d5b8baa5',1,'simulator::Simulator']]],
+  ['lstm_58',['lstm',['../classmodels_1_1_models.html#a2cb0bdd9f6937643d149f60a2c02b667',1,'models::Models']]],
+  ['lstm_5fbidirectional_59',['lstm_bidirectional',['../classmodels_1_1_models.html#ae53538a386b08e112d6a7b82ec27eb09',1,'models::Models']]],
+  ['lstm_5fstacked_60',['lstm_stacked',['../classmodels_1_1_models.html#a4c0aa722dfc125b749594382b8547f2f',1,'models::Models']]]
 ];

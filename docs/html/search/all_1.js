@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['best_5fresult',['best_result',['../classsimulator_1_1Simulator.html#aea3c3b69d35a9a81fb0f01548f000a99',1,'simulator::Simulator']]]
+  ['adf_5ftest_1',['adf_test',['../classts__models_1_1_t_s___models.html#aed41676e0bbe54731d1da4ff66133557',1,'ts_models::TS_Models']]]
 ];
