@@ -1,0 +1,531 @@
+\hypertarget{classsimulator_1_1Simulator}{}\section{simulator.\+Simulator Class Reference}
+\label{classsimulator_1_1Simulator}\index{simulator.\+Simulator@{simulator.\+Simulator}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsimulator_1_1Simulator_a6fd0ae4f2ef9932a555ffa1d46396e32}{train\+\_\+model} (self, cfg)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_a58894faf1432a59b07a8a43af838bc9e}{eval\+\_\+model} (self, cfg)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_a078e62ee729b120598da1c1c057a0884}{grid\+\_\+search} (self)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_aea3c3b69d35a9a81fb0f01548f000a99}{best\+\_\+result} (self, error, result, hyperparms)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_ab35b39d33345b7da4bc856a1b9d81a0a}{run\+\_\+grid\+\_\+search} (self)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_aac4274501be3a4b0f9f2102704d9e866}{series\+\_\+to\+\_\+supervised} (self, data, n\+\_\+in=1, n\+\_\+out=1, dropnan=True)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_a95328cad714d6390b8ef6eedb20b33c7}{performance} (self, y\+\_\+true, y\+\_\+pred)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_ae83357e0a55faafa36c89566cd4cc07f}{forecast} (self, n\+\_\+inputs, n\+\_\+predictions, model)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_ae52bd7608ecf01ac5e426e8491d9ec44}{run\+\_\+simulation} (self)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_a9c33239232dc29a9a084fb57d5b8baa5}{load\+\_\+best\+\_\+model} (self)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_a0f2191dc72d6be5f4e049081940bfe46}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, data, config)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_a3ac8ba88f547844185800ee333e99bde}{set\+\_\+n\+\_\+endog} (self, n\+\_\+endog)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_a0d6a95bda569d042c1d762f59af562b5}{set\+\_\+n\+\_\+steps} (self, n\+\_\+steps)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_af88917d7bc1833f4fdbcbb57bc0c9de6}{set\+\_\+n\+\_\+train\+\_\+steps} (self, n\+\_\+train\+\_\+steps)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_ae2a1a2f8db9633c2aed2dd4d62b77612}{set\+\_\+n\+\_\+features} (self, n\+\_\+features)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_a324de43e915761d93a5aa08f7c013a22}{set\+\_\+n\+\_\+nodes} (self, n\+\_\+nodes)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_a593b40c681ffdf64d3c183b6bfaea04f}{set\+\_\+n\+\_\+epochs} (self, n\+\_\+epochs)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_a2d17c0bee07f7fe69798d1ca6fec25f2}{set\+\_\+n\+\_\+batch} (self, n\+\_\+batch)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_a10aa1b00ed1ca52092b6d9c981260504}{set\+\_\+data} (self, data)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_a29a214d80621ba7325bbb834d13f25c3}{set\+\_\+nrep} (self, n\+\_\+rep)
+\item 
+def \hyperlink{classsimulator_1_1Simulator_aacf67f1375064e16a9384b5716b95e56}{set\+\_\+model\+\_\+arch} (self, model\+\_\+arch)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_ac407c0f6c6ea08d0435bfdbdace5b42e}\label{classsimulator_1_1Simulator_ac407c0f6c6ea08d0435bfdbdace5b42e}} 
+{\bfseries config}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a5b22ec7a36626a46d2fd93f8382f7a37}\label{classsimulator_1_1Simulator_a5b22ec7a36626a46d2fd93f8382f7a37}} 
+{\bfseries n\+\_\+endog}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a1591a331b720fcde82167746c5284f47}\label{classsimulator_1_1Simulator_a1591a331b720fcde82167746c5284f47}} 
+{\bfseries n\+\_\+train\+\_\+steps}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a54f47d5f97d23797073aeb3ba12acef5}\label{classsimulator_1_1Simulator_a54f47d5f97d23797073aeb3ba12acef5}} 
+{\bfseries n\+\_\+nodes}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_ab2517f4441d06e22b3c0304bf3a40b48}\label{classsimulator_1_1Simulator_ab2517f4441d06e22b3c0304bf3a40b48}} 
+{\bfseries n\+\_\+epochs}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_abcd2d34d192342f0202e3191afd62be9}\label{classsimulator_1_1Simulator_abcd2d34d192342f0202e3191afd62be9}} 
+{\bfseries n\+\_\+batch}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_ad182e8470dee75cbaf590f401725d8ca}\label{classsimulator_1_1Simulator_ad182e8470dee75cbaf590f401725d8ca}} 
+{\bfseries data}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_ad639484514f4e3508d7333126b343197}\label{classsimulator_1_1Simulator_ad639484514f4e3508d7333126b343197}} 
+{\bfseries n\+\_\+rep}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_afc4d47a8dfe8b49a22c3038b0698dc1e}\label{classsimulator_1_1Simulator_afc4d47a8dfe8b49a22c3038b0698dc1e}} 
+int {\bfseries n\+\_\+exog} = self.\+data.\+shape\mbox{[}1\mbox{]}-\/1
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_aec5cb73317d556418a5c9de5ecc8882a}\label{classsimulator_1_1Simulator_aec5cb73317d556418a5c9de5ecc8882a}} 
+{\bfseries n\+\_\+features} = self.\+data.\+shape\mbox{[}1\mbox{]}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_afd708a73cba150a90c4120bb9b10323d}\label{classsimulator_1_1Simulator_afd708a73cba150a90c4120bb9b10323d}} 
+\hyperlink{classsimulator_1_1Simulator_afd708a73cba150a90c4120bb9b10323d}{values} = self.\+data.\+values
+\begin{DoxyCompactList}\small\item\em Make forecasts n\+\_\+ahead = 12 n\+\_\+before =24. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a74056619ad959c47ceee446c6d1606de}\label{classsimulator_1_1Simulator_a74056619ad959c47ceee446c6d1606de}} 
+{\bfseries scaler} = Min\+Max\+Scaler(feature\+\_\+range=(0, 1))
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_ad8639127fd1595a5a9e32890896244e7}\label{classsimulator_1_1Simulator_ad8639127fd1595a5a9e32890896244e7}} 
+{\bfseries scaled} = scaler.\+fit\+\_\+transform(\hyperlink{classsimulator_1_1Simulator_afd708a73cba150a90c4120bb9b10323d}{values})
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a07b3e2267211311d7367accc5a046fb3}\label{classsimulator_1_1Simulator_a07b3e2267211311d7367accc5a046fb3}} 
+def {\bfseries reframed} = \hyperlink{classsimulator_1_1Simulator_aac4274501be3a4b0f9f2102704d9e866}{series\+\_\+to\+\_\+supervised}(scaled, n\+\_\+inputs, 1)
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a4acb717a15851ed0dd73c4cc4bdfddf2}\label{classsimulator_1_1Simulator_a4acb717a15851ed0dd73c4cc4bdfddf2}} 
+def {\bfseries values} = reframed.\+values
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a312de68516dfbab5df1c728547be8eb0}\label{classsimulator_1_1Simulator_a312de68516dfbab5df1c728547be8eb0}} 
+{\bfseries n\+\_\+obs} = n\+\_\+inputs $\ast$ n\+\_\+features
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a68cde3ef37bed9121e42094abc8f2593}\label{classsimulator_1_1Simulator_a68cde3ef37bed9121e42094abc8f2593}} 
+{\bfseries test\+\_\+X} = \hyperlink{classsimulator_1_1Simulator_afd708a73cba150a90c4120bb9b10323d}{values}\mbox{[}\+:, \+:n\+\_\+obs\mbox{]}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a11b5f4ef81017b79d0990f12bdc1d9b3}\label{classsimulator_1_1Simulator_a11b5f4ef81017b79d0990f12bdc1d9b3}} 
+list {\bfseries pred\+\_\+list} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_aadf6294f0aa62c00c48a5d9ddd014c5c}\label{classsimulator_1_1Simulator_aadf6294f0aa62c00c48a5d9ddd014c5c}} 
+list {\bfseries y\+\_\+unscaled} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a97303f3e8a68d3ad426955454488c2a9}\label{classsimulator_1_1Simulator_a97303f3e8a68d3ad426955454488c2a9}} 
+{\bfseries n\+\_\+steps} = n\+\_\+predictions
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_aea5dfb20d69fc6faae0bd3f81e8de504}\label{classsimulator_1_1Simulator_aea5dfb20d69fc6faae0bd3f81e8de504}} 
+{\bfseries batch} = test\+\_\+X\mbox{[}i\mbox{]}.reshape((1, n\+\_\+inputs, n\+\_\+features))
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a95293ea1e7c02250681cde22c77bf64f}\label{classsimulator_1_1Simulator_a95293ea1e7c02250681cde22c77bf64f}} 
+{\bfseries pred} = model.\+predict(batch, verbose=1)
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a3d79d7cead00a87aed2f1c1b1074fb43}\label{classsimulator_1_1Simulator_a3d79d7cead00a87aed2f1c1b1074fb43}} 
+{\bfseries inv\+\_\+y} = concatenate((np.\+array(pred), batch\mbox{[}\+:, -\/n\+\_\+exog\+:\mbox{]}), axis=1)
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a0f3e47b2f72fc99c91ca213a82a8e149}\label{classsimulator_1_1Simulator_a0f3e47b2f72fc99c91ca213a82a8e149}} 
+{\bfseries y} = scaler.\+inverse\+\_\+transform(inv\+\_\+y)
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_aa2c935eacc99013c829732c4f0fa3fc8}\label{classsimulator_1_1Simulator_aa2c935eacc99013c829732c4f0fa3fc8}} 
+{\bfseries yhat} = np.\+array(pred\+\_\+list)\mbox{[}\+:,\+:,0\mbox{]}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a9e5bf07410f0b18a59e298eb14ca0255}\label{classsimulator_1_1Simulator_a9e5bf07410f0b18a59e298eb14ca0255}} 
+list {\bfseries add\+\_\+dates} = \mbox{[}self.\+data.\+index\mbox{[}-\/1\mbox{]} + pd.\+Date\+Offset(months=x) for x in range(0,n\+\_\+steps+1) \mbox{]}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a4f669fa37482befc8451d1caf1023485}\label{classsimulator_1_1Simulator_a4f669fa37482befc8451d1caf1023485}} 
+{\bfseries future\+\_\+dates} = pd.\+Data\+Frame(index=add\+\_\+dates\mbox{[}1\+:\mbox{]},columns=self.\+data.\+columns)
+\item 
+{\bfseries df\+\_\+predict}
+\item 
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a022453d69b38b30f5db5073a47f0f293}\label{classsimulator_1_1Simulator_a022453d69b38b30f5db5073a47f0f293}} 
+{\bfseries df\+\_\+proj} = pd.\+concat(\mbox{[}self.\+data,df\+\_\+predict\mbox{]}, axis=1)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a0f2191dc72d6be5f4e049081940bfe46}\label{classsimulator_1_1Simulator_a0f2191dc72d6be5f4e049081940bfe46}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data,  }\item[{}]{config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construtor do objeto Simulators.
+
+Parameters
+----------
+data : pd.DataFrame,
+    Séries Temporais no formato de um DataFrame, onde a primeira coluna
+    representa a variável eendógena e as seguintes as variáveis exógenas.
+config : list
+    Lista de parâmetros para a simulação.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimulator_1_1Simulator_aea3c3b69d35a9a81fb0f01548f000a99}\label{classsimulator_1_1Simulator_aea3c3b69d35a9a81fb0f01548f000a99}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!best\+\_\+result@{best\+\_\+result}}
+\index{best\+\_\+result@{best\+\_\+result}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{best\+\_\+result()}{best\_result()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+best\+\_\+result (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{error,  }\item[{}]{result,  }\item[{}]{hyperparms }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função que escolhe o melhor resultado na análise de grid search.
+
+Parameters
+----------
+errors : list,
+    Lista com os erros dos modelos.
+results : list,
+    Lista com os resultados do algoritmo de grid search.
+hyperparams : list,
+    Lista dos parâmetros dos modelos testados.
+
+Returns
+-------
+best_fit : list,
+    Lista com os resultados do modelo de melhor ajuste.
+best_hyper : list,
+    Lista com os parâmetros do modelo de melhor ajuste.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_a58894faf1432a59b07a8a43af838bc9e}\label{classsimulator_1_1Simulator_a58894faf1432a59b07a8a43af838bc9e}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!eval\+\_\+model@{eval\+\_\+model}}
+\index{eval\+\_\+model@{eval\+\_\+model}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{eval\+\_\+model()}{eval\_model()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+eval\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cfg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função para avaliação das redes neurais com previsão dentro da amostra.
+
+Parameters
+----------
+cfg : list
+    Lista de parâmetros da rede neural e da simulação.
+
+Returns
+-------
+result_mean : np.array,
+    Média dos resultados da previsão do modelo dentro da amostra.
+perf_mean: np.array,
+    Média dos resultados da análise de desempenho do modelo.  
+cfg : list
+    Lista de parâmetros da rede neural e da simulação.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_ae83357e0a55faafa36c89566cd4cc07f}\label{classsimulator_1_1Simulator_ae83357e0a55faafa36c89566cd4cc07f}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!forecast@{forecast}}
+\index{forecast@{forecast}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{forecast()}{forecast()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+forecast (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n\+\_\+inputs,  }\item[{}]{n\+\_\+predictions,  }\item[{}]{model }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função que realiza a previsão fora da amostra (projeção).
+
+Parameters
+----------
+n_inputs : int,
+    Número de dados utilizados na rede neural para o treinamento da 
+    rede neural.
+n_predictions : int,
+    Número de previsões fora da amostra.
+model : keras.models,
+    Modelo de rede neural para realizar a previsão.
+
+Returns
+-------
+df_proj : pd.DataFrame,
+    DataFrame com os resultados projetados (previsão fora da amostra)
+pred_list : list,
+    Lista com os dados utilizados para a previsão.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_a078e62ee729b120598da1c1c057a0884}\label{classsimulator_1_1Simulator_a078e62ee729b120598da1c1c057a0884}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!grid\+\_\+search@{grid\+\_\+search}}
+\index{grid\+\_\+search@{grid\+\_\+search}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{grid\+\_\+search()}{grid\_search()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+grid\+\_\+search (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função que implementa o algoritmo de grid search para avaliação dos 
+modelos de redes neurais.
+
+Returns
+-------
+results : list,
+    Lista com os resultados do algoritmo de grid search.
+errors : list,
+    Lista com os erros dos modelos.
+hyperparams : list,
+    Lista dos parâmetros dos modelos testados.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_a9c33239232dc29a9a084fb57d5b8baa5}\label{classsimulator_1_1Simulator_a9c33239232dc29a9a084fb57d5b8baa5}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!load\+\_\+best\+\_\+model@{load\+\_\+best\+\_\+model}}
+\index{load\+\_\+best\+\_\+model@{load\+\_\+best\+\_\+model}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{load\+\_\+best\+\_\+model()}{load\_best\_model()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+load\+\_\+best\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função que carrega a arquitetura e os resultados da previsão do modelo 
+que apresentou melhor desempenho na avaliação. Lê dados dos arquivos
+gravados em disco.
+
+Returns
+-------
+best_model : keras.models, 
+    Arquitetura do modelo de rede neural com melhor desempenho.
+best_res : np.array,
+    Resultados da previsão do modelo de rede neural com melhor desempenho.
+n_inputs: int,
+    Número de dados utilizados na rede neural para o treinamento da 
+    rede neural.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_a95328cad714d6390b8ef6eedb20b33c7}\label{classsimulator_1_1Simulator_a95328cad714d6390b8ef6eedb20b33c7}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!performance@{performance}}
+\index{performance@{performance}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{performance()}{performance()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+performance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{y\+\_\+true,  }\item[{}]{y\+\_\+pred }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função que mede a capacidade preditiva para rede neural.
+
+Parameters
+----------
+y_true : np.array,
+    Array com os valores esperados.
+y_pred : np.array
+    Array com os valores previstos.
+
+Returns
+-------
+mse : double,
+    Erro quadrático médio.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_ab35b39d33345b7da4bc856a1b9d81a0a}\label{classsimulator_1_1Simulator_ab35b39d33345b7da4bc856a1b9d81a0a}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!run\+\_\+grid\+\_\+search@{run\+\_\+grid\+\_\+search}}
+\index{run\+\_\+grid\+\_\+search@{run\+\_\+grid\+\_\+search}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{run\+\_\+grid\+\_\+search()}{run\_grid\_search()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+run\+\_\+grid\+\_\+search (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função que executa o algoritmo de grid search.
+
+Returns
+-------
+results : list,
+    Lista com os resultados do algoritmo de grid search.
+errors : list,
+    Lista com os erros dos modelos.
+hyperparams : list,
+    Lista dos parâmetros dos modelos testados.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_ae52bd7608ecf01ac5e426e8491d9ec44}\label{classsimulator_1_1Simulator_ae52bd7608ecf01ac5e426e8491d9ec44}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!run\+\_\+simulation@{run\+\_\+simulation}}
+\index{run\+\_\+simulation@{run\+\_\+simulation}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{run\+\_\+simulation()}{run\_simulation()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+run\+\_\+simulation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função que executa a simulação.
+
+Returns
+-------
+best_res : np.array,
+    Array com o melhor resultado do modelo com o melhor desempenho.
+best_par : list,
+    Lista dos parâmetros do modelo com o melhor desempenho.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_aac4274501be3a4b0f9f2102704d9e866}\label{classsimulator_1_1Simulator_aac4274501be3a4b0f9f2102704d9e866}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!series\+\_\+to\+\_\+supervised@{series\+\_\+to\+\_\+supervised}}
+\index{series\+\_\+to\+\_\+supervised@{series\+\_\+to\+\_\+supervised}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{series\+\_\+to\+\_\+supervised()}{series\_to\_supervised()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+series\+\_\+to\+\_\+supervised (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data,  }\item[{}]{n\+\_\+in = {\ttfamily 1},  }\item[{}]{n\+\_\+out = {\ttfamily 1},  }\item[{}]{dropnan = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função que transforma os dados de séries temporais para em sequências 
+que possam ser entendidas pela rede neural. 
+
+Parameters
+----------
+data : pd.DataFrame,
+    Séries Temporais no formato de um DataFrame, onde a primeira coluna
+    representa a variável eendógena e as seguintes as variáveis exógenas.
+n_in : int, optional
+    Número de dados de entrada (t-n_in) para previsão do dado em t. The default is 1.
+n_out : int, optional
+    Número de dados de saída (em t+n_out-1). The default is 1.
+dropnan : bool, optional
+    Variável booleana. True para excluir NaN e False caso contrário. The default is True.
+
+Returns
+-------
+agg : pd.DataFrame,
+    Séries na forma de sequências para interpretação da rede neural.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_a10aa1b00ed1ca52092b6d9c981260504}\label{classsimulator_1_1Simulator_a10aa1b00ed1ca52092b6d9c981260504}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!set\+\_\+data@{set\+\_\+data}}
+\index{set\+\_\+data@{set\+\_\+data}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{set\+\_\+data()}{set\_data()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+set\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+data : TYPE
+    DESCRIPTION.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_aacf67f1375064e16a9384b5716b95e56}\label{classsimulator_1_1Simulator_aacf67f1375064e16a9384b5716b95e56}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!set\+\_\+model\+\_\+arch@{set\+\_\+model\+\_\+arch}}
+\index{set\+\_\+model\+\_\+arch@{set\+\_\+model\+\_\+arch}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{set\+\_\+model\+\_\+arch()}{set\_model\_arch()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+set\+\_\+model\+\_\+arch (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model\+\_\+arch }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+model_arch : TYPE
+    DESCRIPTION.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_a2d17c0bee07f7fe69798d1ca6fec25f2}\label{classsimulator_1_1Simulator_a2d17c0bee07f7fe69798d1ca6fec25f2}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!set\+\_\+n\+\_\+batch@{set\+\_\+n\+\_\+batch}}
+\index{set\+\_\+n\+\_\+batch@{set\+\_\+n\+\_\+batch}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{set\+\_\+n\+\_\+batch()}{set\_n\_batch()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+set\+\_\+n\+\_\+batch (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n\+\_\+batch }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+n_batch : TYPE
+    DESCRIPTION.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_a3ac8ba88f547844185800ee333e99bde}\label{classsimulator_1_1Simulator_a3ac8ba88f547844185800ee333e99bde}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!set\+\_\+n\+\_\+endog@{set\+\_\+n\+\_\+endog}}
+\index{set\+\_\+n\+\_\+endog@{set\+\_\+n\+\_\+endog}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{set\+\_\+n\+\_\+endog()}{set\_n\_endog()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+set\+\_\+n\+\_\+endog (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n\+\_\+endog }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função que configura o número de variárias endógenas.
+
+Parameters
+----------
+n_endog : list ou int,
+    Lista ou inteiro com o número de variáveis endógenas.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_a593b40c681ffdf64d3c183b6bfaea04f}\label{classsimulator_1_1Simulator_a593b40c681ffdf64d3c183b6bfaea04f}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!set\+\_\+n\+\_\+epochs@{set\+\_\+n\+\_\+epochs}}
+\index{set\+\_\+n\+\_\+epochs@{set\+\_\+n\+\_\+epochs}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{set\+\_\+n\+\_\+epochs()}{set\_n\_epochs()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+set\+\_\+n\+\_\+epochs (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n\+\_\+epochs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+n_epochs : TYPE
+    DESCRIPTION.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_ae2a1a2f8db9633c2aed2dd4d62b77612}\label{classsimulator_1_1Simulator_ae2a1a2f8db9633c2aed2dd4d62b77612}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!set\+\_\+n\+\_\+features@{set\+\_\+n\+\_\+features}}
+\index{set\+\_\+n\+\_\+features@{set\+\_\+n\+\_\+features}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{set\+\_\+n\+\_\+features()}{set\_n\_features()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+set\+\_\+n\+\_\+features (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n\+\_\+features }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+n_features : TYPE
+    DESCRIPTION.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_a324de43e915761d93a5aa08f7c013a22}\label{classsimulator_1_1Simulator_a324de43e915761d93a5aa08f7c013a22}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!set\+\_\+n\+\_\+nodes@{set\+\_\+n\+\_\+nodes}}
+\index{set\+\_\+n\+\_\+nodes@{set\+\_\+n\+\_\+nodes}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{set\+\_\+n\+\_\+nodes()}{set\_n\_nodes()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+set\+\_\+n\+\_\+nodes (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n\+\_\+nodes }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+n_nodes : TYPE
+    DESCRIPTION.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_a0d6a95bda569d042c1d762f59af562b5}\label{classsimulator_1_1Simulator_a0d6a95bda569d042c1d762f59af562b5}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!set\+\_\+n\+\_\+steps@{set\+\_\+n\+\_\+steps}}
+\index{set\+\_\+n\+\_\+steps@{set\+\_\+n\+\_\+steps}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{set\+\_\+n\+\_\+steps()}{set\_n\_steps()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+set\+\_\+n\+\_\+steps (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n\+\_\+steps }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função que configura o número de intervalos da sequência para previsão.
+
+Parameters
+----------
+n_step : list ou int,
+    Lista ou inteiro com número de intervalos da sequência para previsão.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_af88917d7bc1833f4fdbcbb57bc0c9de6}\label{classsimulator_1_1Simulator_af88917d7bc1833f4fdbcbb57bc0c9de6}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!set\+\_\+n\+\_\+train\+\_\+steps@{set\+\_\+n\+\_\+train\+\_\+steps}}
+\index{set\+\_\+n\+\_\+train\+\_\+steps@{set\+\_\+n\+\_\+train\+\_\+steps}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{set\+\_\+n\+\_\+train\+\_\+steps()}{set\_n\_train\_steps()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+set\+\_\+n\+\_\+train\+\_\+steps (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n\+\_\+train\+\_\+steps }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função que configura o número de intervalos para treino da rede neural.
+
+Parameters
+----------
+n_train_steps : list ou int,
+    Lista ou inteiro com o número de intervalos para treino da rede neural.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_a29a214d80621ba7325bbb834d13f25c3}\label{classsimulator_1_1Simulator_a29a214d80621ba7325bbb834d13f25c3}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!set\+\_\+nrep@{set\+\_\+nrep}}
+\index{set\+\_\+nrep@{set\+\_\+nrep}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{set\+\_\+nrep()}{set\_nrep()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+set\+\_\+nrep (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n\+\_\+rep }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+n_rep : TYPE
+    DESCRIPTION.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ \mbox{\Hypertarget{classsimulator_1_1Simulator_a6fd0ae4f2ef9932a555ffa1d46396e32}\label{classsimulator_1_1Simulator_a6fd0ae4f2ef9932a555ffa1d46396e32}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!train\+\_\+model@{train\+\_\+model}}
+\index{train\+\_\+model@{train\+\_\+model}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{train\+\_\+model()}{train\_model()}}
+{\footnotesize\ttfamily def simulator.\+Simulator.\+train\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cfg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função para treinamento das redes neurais
+
+Parameters
+----------
+cfg : list
+    Lista de parâmetros da rede neural e da simulação.
+
+Returns
+-------
+model: keras.model,
+    Modelo treinado.
+test_X: np.array,
+    Array de variáveis endógenas formatado para a avaliação da rede neural.
+test_y: np.array,
+    Array de variáveis exógenas formatado para a avaliação da rede neural.
+scaler: sklearn.preprocessing.MinMaxScaler,
+    Objeto de normalização dos dados da rede neural\end{DoxyVerb}
+ 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsimulator_1_1Simulator_a5c72ce9d4fc4bc35695c12265a05a645}\label{classsimulator_1_1Simulator_a5c72ce9d4fc4bc35695c12265a05a645}} 
+\index{simulator\+::\+Simulator@{simulator\+::\+Simulator}!df\+\_\+predict@{df\+\_\+predict}}
+\index{df\+\_\+predict@{df\+\_\+predict}!simulator\+::\+Simulator@{simulator\+::\+Simulator}}
+\subsubsection{\texorpdfstring{df\+\_\+predict}{df\_predict}}
+{\footnotesize\ttfamily simulator.\+Simulator.\+df\+\_\+predict\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=  pd.DataFrame(yhat,
+                              index=future\_dates[-n\_steps:].index, columns=[\textcolor{stringliteral}{'Prediction'}])
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+simulator.\+py\end{DoxyCompactItemize}

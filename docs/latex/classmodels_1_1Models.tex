@@ -1,0 +1,150 @@
+\hypertarget{classmodels_1_1Models}{}\section{models.\+Models Class Reference}
+\label{classmodels_1_1Models}\index{models.\+Models@{models.\+Models}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmodels_1_1Models_a2cb0bdd9f6937643d149f60a2c02b667}{lstm} (self)
+\item 
+def \hyperlink{classmodels_1_1Models_a4c0aa722dfc125b749594382b8547f2f}{lstm\+\_\+stacked} (self)
+\item 
+def \hyperlink{classmodels_1_1Models_ae53538a386b08e112d6a7b82ec27eb09}{lstm\+\_\+bidirectional} (self)
+\item 
+def \hyperlink{classmodels_1_1Models_a74e3aab482c7db13cfe8b906c2fc69bd}{gru} (self)
+\item 
+def \hyperlink{classmodels_1_1Models_a8f0f9abd97b5a4fb6453a05baff20d14}{set\+\_\+x\+\_\+shape} (self, x\+\_\+shape)
+\item 
+def \hyperlink{classmodels_1_1Models_a1a6e98441b743361bc53da03ccc4ac19}{set\+\_\+y\+\_\+shape} (self, y\+\_\+shape)
+\item 
+def \hyperlink{classmodels_1_1Models_a188d50d7b64d7ab545be9a434e6e7c19}{set\+\_\+neurons} (self, neurons)
+\item 
+def \hyperlink{classmodels_1_1Models_a614dccfc44ed674cbe83fbdb3f8e7461}{get\+\_\+model\+\_\+name} (self)
+\item 
+\mbox{\Hypertarget{classmodels_1_1Models_a359d06c6bf5ddad46b50fddfe43c8f5b}\label{classmodels_1_1Models_a359d06c6bf5ddad46b50fddfe43c8f5b}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmodels_1_1Models_aaed9b2c62c051b46a237c13e866b0318}\label{classmodels_1_1Models_aaed9b2c62c051b46a237c13e866b0318}} 
+{\bfseries x\+\_\+shape}
+\item 
+\mbox{\Hypertarget{classmodels_1_1Models_a624ac5bbac787bfafbc1dafb08ce2cc5}\label{classmodels_1_1Models_a624ac5bbac787bfafbc1dafb08ce2cc5}} 
+{\bfseries y\+\_\+shape}
+\item 
+\mbox{\Hypertarget{classmodels_1_1Models_af910282db7339b39a4928b125a3419a6}\label{classmodels_1_1Models_af910282db7339b39a4928b125a3419a6}} 
+{\bfseries neurons}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmodels_1_1Models_a0d1256f3e0cd2fa25209d1e42badd050}\label{classmodels_1_1Models_a0d1256f3e0cd2fa25209d1e42badd050}} 
+string {\bfseries M\+O\+D\+E\+L\+\_\+\+A\+R\+CH} = \textquotesingle{}\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmodels_1_1Models_a614dccfc44ed674cbe83fbdb3f8e7461}\label{classmodels_1_1Models_a614dccfc44ed674cbe83fbdb3f8e7461}} 
+\index{models\+::\+Models@{models\+::\+Models}!get\+\_\+model\+\_\+name@{get\+\_\+model\+\_\+name}}
+\index{get\+\_\+model\+\_\+name@{get\+\_\+model\+\_\+name}!models\+::\+Models@{models\+::\+Models}}
+\subsubsection{\texorpdfstring{get\+\_\+model\+\_\+name()}{get\_model\_name()}}
+{\footnotesize\ttfamily def models.\+Models.\+get\+\_\+model\+\_\+name (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns
+-------
+None.\end{DoxyVerb}
+ \mbox{\Hypertarget{classmodels_1_1Models_a74e3aab482c7db13cfe8b906c2fc69bd}\label{classmodels_1_1Models_a74e3aab482c7db13cfe8b906c2fc69bd}} 
+\index{models\+::\+Models@{models\+::\+Models}!gru@{gru}}
+\index{gru@{gru}!models\+::\+Models@{models\+::\+Models}}
+\subsubsection{\texorpdfstring{gru()}{gru()}}
+{\footnotesize\ttfamily def models.\+Models.\+gru (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função que constrói o modelo baseado em neurônios GRU.
+
+Returns
+-------
+model : keras.model,
+    Modelo com arquitetura baseada em neurônios GRU.\end{DoxyVerb}
+ \mbox{\Hypertarget{classmodels_1_1Models_a2cb0bdd9f6937643d149f60a2c02b667}\label{classmodels_1_1Models_a2cb0bdd9f6937643d149f60a2c02b667}} 
+\index{models\+::\+Models@{models\+::\+Models}!lstm@{lstm}}
+\index{lstm@{lstm}!models\+::\+Models@{models\+::\+Models}}
+\subsubsection{\texorpdfstring{lstm()}{lstm()}}
+{\footnotesize\ttfamily def models.\+Models.\+lstm (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função que constrói o modelo baseado em neurônios LSTM.
+Usa a arquitetura CuDNN para execução mais rápida.
+
+       Returns
+       -------
+       model : keras.model,
+   Modelo com arquitetura baseada em neurônios LSTM.\end{DoxyVerb}
+ \mbox{\Hypertarget{classmodels_1_1Models_ae53538a386b08e112d6a7b82ec27eb09}\label{classmodels_1_1Models_ae53538a386b08e112d6a7b82ec27eb09}} 
+\index{models\+::\+Models@{models\+::\+Models}!lstm\+\_\+bidirectional@{lstm\+\_\+bidirectional}}
+\index{lstm\+\_\+bidirectional@{lstm\+\_\+bidirectional}!models\+::\+Models@{models\+::\+Models}}
+\subsubsection{\texorpdfstring{lstm\+\_\+bidirectional()}{lstm\_bidirectional()}}
+{\footnotesize\ttfamily def models.\+Models.\+lstm\+\_\+bidirectional (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função que constrói o modelo baseado em neurônios LSTM-Bidirecional
+
+Returns
+-------
+model : keras.model,
+    Modelo com arquitetura baseada em neurônios LSTM-Bidirecional.\end{DoxyVerb}
+ \mbox{\Hypertarget{classmodels_1_1Models_a4c0aa722dfc125b749594382b8547f2f}\label{classmodels_1_1Models_a4c0aa722dfc125b749594382b8547f2f}} 
+\index{models\+::\+Models@{models\+::\+Models}!lstm\+\_\+stacked@{lstm\+\_\+stacked}}
+\index{lstm\+\_\+stacked@{lstm\+\_\+stacked}!models\+::\+Models@{models\+::\+Models}}
+\subsubsection{\texorpdfstring{lstm\+\_\+stacked()}{lstm\_stacked()}}
+{\footnotesize\ttfamily def models.\+Models.\+lstm\+\_\+stacked (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Função que constrói o modelo baseado em neurônios LSTM empilhados.
+
+Returns
+-------
+model : keras.model,
+    Modelo com arquitetura baseada em neurônios LSTM empilhados.\end{DoxyVerb}
+ \mbox{\Hypertarget{classmodels_1_1Models_a188d50d7b64d7ab545be9a434e6e7c19}\label{classmodels_1_1Models_a188d50d7b64d7ab545be9a434e6e7c19}} 
+\index{models\+::\+Models@{models\+::\+Models}!set\+\_\+neurons@{set\+\_\+neurons}}
+\index{set\+\_\+neurons@{set\+\_\+neurons}!models\+::\+Models@{models\+::\+Models}}
+\subsubsection{\texorpdfstring{set\+\_\+neurons()}{set\_neurons()}}
+{\footnotesize\ttfamily def models.\+Models.\+set\+\_\+neurons (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{neurons }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+neurons : TYPE
+    DESCRIPTION.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ \mbox{\Hypertarget{classmodels_1_1Models_a8f0f9abd97b5a4fb6453a05baff20d14}\label{classmodels_1_1Models_a8f0f9abd97b5a4fb6453a05baff20d14}} 
+\index{models\+::\+Models@{models\+::\+Models}!set\+\_\+x\+\_\+shape@{set\+\_\+x\+\_\+shape}}
+\index{set\+\_\+x\+\_\+shape@{set\+\_\+x\+\_\+shape}!models\+::\+Models@{models\+::\+Models}}
+\subsubsection{\texorpdfstring{set\+\_\+x\+\_\+shape()}{set\_x\_shape()}}
+{\footnotesize\ttfamily def models.\+Models.\+set\+\_\+x\+\_\+shape (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x\+\_\+shape }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+x_shape : TYPE
+    DESCRIPTION.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ \mbox{\Hypertarget{classmodels_1_1Models_a1a6e98441b743361bc53da03ccc4ac19}\label{classmodels_1_1Models_a1a6e98441b743361bc53da03ccc4ac19}} 
+\index{models\+::\+Models@{models\+::\+Models}!set\+\_\+y\+\_\+shape@{set\+\_\+y\+\_\+shape}}
+\index{set\+\_\+y\+\_\+shape@{set\+\_\+y\+\_\+shape}!models\+::\+Models@{models\+::\+Models}}
+\subsubsection{\texorpdfstring{set\+\_\+y\+\_\+shape()}{set\_y\_shape()}}
+{\footnotesize\ttfamily def models.\+Models.\+set\+\_\+y\+\_\+shape (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{y\+\_\+shape }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+y_shape : TYPE
+    DESCRIPTION.
+
+Returns
+-------
+None.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+models.\+py\end{DoxyCompactItemize}
