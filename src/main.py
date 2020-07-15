@@ -9,7 +9,7 @@ Department of Economics - Applied Economics
 
 Thesis Supervisor: Geovana Lorena Bertussi, PhD.
 Title:Professor of Department of Economics - UnB
-    
+
 """
 #%% Importa Bibliotecas
 from lib import *
@@ -22,7 +22,7 @@ from simulator import *
 def config_model(n_exog = [4], n_steps = [8], n_train_steps = [24], n_features = [5],
                  n_nodes = [150,300],n_epochs = [100],n_batch = [128] ):
     """
-    
+
 
     Parameters
     ----------
@@ -48,7 +48,7 @@ def config_model(n_exog = [4], n_steps = [8], n_train_steps = [24], n_features =
     de grid search
 
     """
-    
+
     # forma de inserção manual dos dados: [[5],[8],[24],[5],[150,300],[50,100],[72]]
     configs = list()
     for i in n_exog:
@@ -58,9 +58,8 @@ def config_model(n_exog = [4], n_steps = [8], n_train_steps = [24], n_features =
                     for m in n_nodes:
                         for n in n_epochs:
                           for o in n_batch:
-                            cfg = [i,j,k, l, m, n, o]
+                            cfg = [i,j,k,l,m,n,o]
                             configs.append(cfg)
-                              
     print('\nTotal de Combinações de Hiperparâmetros: %d' % len(configs))
     return configs
 
@@ -74,9 +73,10 @@ def run_lstm(data):
 
     """
     # [4, 36, 36, 5, 300, 300, 32]     
-    config = config_model(n_steps = [36,24],n_train_steps = [24,36],
-                          n_nodes=[300,50],n_epochs=[300],n_batch = [32])
+    config = config_model(n_steps = [36],n_train_steps = [36],
+                          n_nodes=[300],n_epochs=[300],n_batch = [32])
 
+ 
     simulator = Simulator(data, config)
     simulator.set_model_arch('LSTM')
     best_res, best_par = simulator.run_simulation()
@@ -441,7 +441,7 @@ def main():
     df = df[var]
     
        
-    run_lstm(df)
+    #run_lstm(df)
     #run_lstm_bidirecccional(df)
     #run_lstm_stacked(df)
     #run_gru(df)
@@ -450,7 +450,7 @@ def main():
     #run_neuralVAR(df)
     #run_ARIMA(df)
     
-    #synthetic_forecast(df)
+    synthetic_forecast(df)
     
     print("**"*25)
     print('-- Fim da Simulação: --')

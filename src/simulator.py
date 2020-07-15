@@ -16,7 +16,7 @@ from models import *
 from ts_models import *
 
 
-#%% Parâmetros para utilização da GPU
+# Parâmetros para utilização da GPU
 gpu_options = tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction = 1., allow_growth=True)
    
 sess = tf.compat.v1.Session(config=tf.compat.v1.ConfigProto(gpu_options=gpu_options))
@@ -777,7 +777,7 @@ class Simulator:
         forward = test.shape[0]
         date_range = pd.date_range(date, periods=forward+1, freq='M', closed='right')
         
-        final_pred = ts_model.retrive_prediction(var_result, period, df_diff.loc[:date], data.loc[:date], steps = forward)
+        final_pred = ts_model.retrive_VAR_prediction(var_result, period, df_diff.loc[:date], data.loc[:date], steps = forward)
         final_true = data.loc[date_range]
          
         ### PLOT ACTUAL vs PREDICTION ###
@@ -1032,20 +1032,7 @@ class Simulator:
             self.config = config
             
             
-# =============================================================================
-#             config = np.array(config).reshape(len(config[0]),len(config))    
-#             
-#             self.n_endog = config[0]
-#             self.n_steps= config[1] 
-#             self.n_train_steps = config[2] 
-#             self.n_features = config[3] 
-#             self.n_nodes = config[4] 
-#             self.n_epochs = config[5] 
-#             self.n_batch = config[6]
-# =============================================================================
-            
-            
-            self.config = config
+            config = np.array(config).reshape(len(config[0]),len(config))    
             
             self.n_endog = config[0]
             self.n_steps= config[1] 
@@ -1054,6 +1041,21 @@ class Simulator:
             self.n_nodes = config[4] 
             self.n_epochs = config[5] 
             self.n_batch = config[6]
+            
+            print(config)
+
+# =============================================================================
+#             self.config = config
+#             
+#             self.n_endog = config[0]
+#             self.n_steps= config[1]
+#             self.n_train_steps = config[2] 
+#             self.n_features = config[3]
+#             self.n_nodes = config[4]
+#             self.n_epochs = config[5]
+#             self.n_batch = config[6]
+#             
+# =============================================================================
 
         self.data = data
         self.n_rep = 10

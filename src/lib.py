@@ -16,14 +16,6 @@ from tensorflow import keras
 from tensorflow.python.keras.callbacks import TensorBoard
 from tensorflow.keras.preprocessing.sequence import TimeseriesGenerator
 
-
-
-
-
-
-
-
-
 # bibliotecas matemáticas
 from sklearn.metrics import mean_squared_error
 import numpy as np
@@ -44,7 +36,6 @@ from statsmodels.tsa.vector_ar.var_model import VAR
 from pmdarima.arima.utils import ndiffs
 import pmdarima as pm
 
-
 # bilbiotecas de utilidades do sistema
 import sys
 import os
@@ -53,7 +44,6 @@ from datetime import datetime
 import time
 import logging
 from IPython import get_ipython
-
 
 # As novas versões do Pandas e Matplotlib trazem diversas mensagens de aviso ao desenvolvedor. Vamos desativar isso.
 # bibliotecas para visualização dos dados
@@ -71,9 +61,12 @@ plt.rcParams['axes.labelsize'] = 14
 plt.rcParams['xtick.labelsize'] = 12
 plt.rcParams['ytick.labelsize'] = 12
 plt.rcParams['text.color'] = 'k'
-from matplotlib.pylab import rcParams 
+from matplotlib.pylab import rcParams
 rcParams['figure.figsize'] = 20,25
 matplotlib.style.use('fivethirtyeight')
+
+from IPython import *
+
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 from tqdm import tqdm
