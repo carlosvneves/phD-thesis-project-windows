@@ -179,6 +179,7 @@ class Simulator:
         # Vamos repetir o processo de treinamento por 20 vezes e armazenar todos os resultados, pois assim usaremos
         # diferentes amostras. Ao final, tiramos a média para encontrar as previsões.
         # make a prediction
+        print('\n')
         print('##' * 25)
         print(" --- Avaliando do Modelo : ---")
         print('##' * 25)
@@ -194,9 +195,12 @@ class Simulator:
         print(f'## Parâmetros: \n{series_par}\n{model_par}\n ## ')
         print(datetime.now().strftime("%Y/%m/%d-%H:%M:%S\n"))
 
-        #l = len(perf)
+        
 
-        #printProgressBar(0, l, prefix = 'Progress-evaluation:', suffix = 'Complete', length = 50)
+        
+        print('\n')
+        print('##'*25)
+        
 
         for i in tqdm(range(self.n_rep)):
 
@@ -273,6 +277,7 @@ class Simulator:
         # Initial call to print 0% progress
         print("\n")
         printProgressBar(0, l, prefix='Progress-grid search:', suffix='Complete', length=50)
+        print("\n")
 
         # for i,cfg in enumerate(config):
         for i, cfg in enumerate(config):
@@ -281,6 +286,7 @@ class Simulator:
             errors.append(error)
             hyperparams.append(hyper)
             # Update Progress Bar
+            print("\n")
             printProgressBar(i + 1, l, prefix='Progress-grid search:', suffix='Complete', length=50)
             print("\n")
 
@@ -644,7 +650,7 @@ class Simulator:
 
         return best_model, best_res, n_inputs
 
-    def neural_VAR(self, max_var_order, split=0.75):
+    def LSTM_VAR(self, max_var_order, split=0.75):
         """
 
 
@@ -874,7 +880,7 @@ class Simulator:
 
         diz_ac_lstm, diz_ac_var_lstm = compute_autocor(data, true, pred, pred_simple)
 
-        return
+        return pred 
 
     def ARIMA(self, split=0.75):
 
@@ -960,7 +966,7 @@ class Simulator:
 
     # %% Class constructor
 
-    def __init__(self, data, config):
+    def __init__(self, data=None, config=None):
         """
         Construtor do objeto Simulators.
 
@@ -977,35 +983,23 @@ class Simulator:
         None.
 
         """
-        if len(config) > 0:
-            self.config = config
+        if data is not None and config is not None:
+            if len(config) > 0:
+                self.config = config
 
-            config = np.array(config).reshape(len(config[0]), len(config))
+                config = np.array(config).reshape(len(config[0]), len(config))
 
-            self.n_endog = config[0]
-            self.n_steps = config[1]
-            self.n_train_steps = config[2]
-            self.n_features = config[3]
-            self.n_nodes = config[4]
-            self.n_epochs = config[5]
-            self.n_batch = config[6]
+                self.n_endog = config[0]
+                self.n_steps = config[1]
+                self.n_train_steps = config[2]
+                self.n_features = config[3]
+                self.n_nodes = config[4]
+                self.n_epochs = config[5]
+                self.n_batch = config[6]
 
-            print(config)
+            self.data = data
 
-# =============================================================================
-#             self.config = config
-#
-#             self.n_endog = config[0]
-#             self.n_steps= config[1]
-#             self.n_train_steps = config[2]
-#             self.n_features = config[3]
-#             self.n_nodes = config[4]
-#             self.n_epochs = config[5]
-#             self.n_batch = config[6]
-#
-# =============================================================================
-
-        self.data = data
+            
         self.n_rep = 10
         logging.info('## Redes Neurais construídas ##')
 

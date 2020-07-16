@@ -247,6 +247,7 @@ def printProgressBar(iteration, total, prefix='', suffix='', decimals=1, length=
     percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
     filledLength = int(length * iteration // total)
     bar = fill * filledLength + '-' * (length - filledLength)
+    print('\n')
     print(f'\r{prefix} |{bar}| {percent}% {suffix}', end=printEnd)
     # Print New Line on Complete
     if iteration == total:
@@ -330,3 +331,50 @@ def compute_autocor(data, true, pred, pred_simple):
     plt.show()
 
     return diz_ac_lstm, diz_ac_var_lstm
+
+# Lista de hiperparâmetros que serão testados
+def config_model(n_exog=[4], n_steps=[8], n_train_steps=[24], n_features=[5],
+                 n_nodes=[150, 300], n_epochs=[100], n_batch=[128]):
+    """
+    Função para configurar os parâmetros da simulação e realizar a otimização de hiperparâmetros por meio de grid search
+
+    Parameters
+    ----------
+    n_exog : list, optional
+        Número de variáveis exógenas do modelo. The default is [4].
+    n_steps : list, optional
+        Número de intervalos de tempo anteriores para a previsão. The default is [8].
+    n_train_steps : list, optional
+        Número de intervalos de tempo para treino da rede neural. The default is [24].
+    n_features : list, optional
+        Número total de variáveis exógenas e endógenas. The default is [5].
+    n_nodes : list, optional
+        Número de neurônios da rede neural. The default is [150,300].
+    n_epochs : list, optional
+        Número máximo de épocas de treinamento. The default is [100].
+    n_batch : list, optional
+        Número total de batches da rede neural. The default is [128].
+
+    Returns
+    -------
+    configs: list
+    Lista de parâmetros para a simulação individual o para realização
+    de grid search
+
+    """
+
+    # forma de inserção manual dos dados: [[5],[8],[24],[5],[150,300],[50,100],[72]]
+    configs = list()
+    for i in n_exog:
+        for j in n_steps:
+            for k in n_train_steps:
+                for l in n_features:
+                    for m in n_nodes:
+                        for n in n_epochs:
+                            for o in n_batch:
+                                cfg = [i, j, k, l, m, n, o]
+                                configs.append(cfg)
+    print('\nTotal de Combinações de Hiperparâmetros: %d' % len(configs))
+    return configs
+
+
