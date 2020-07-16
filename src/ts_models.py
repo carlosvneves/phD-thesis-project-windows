@@ -8,12 +8,11 @@ Created on Thu Jul  9 22:27:37 2020
 from lib import *
 
 
-
 class TS_Models:
 
     #%% PLOTTING UTILITY FUNCTIONS ###
 
-    def plot_series(self,train_date, train, test_date, test, name):
+    def plot_series(self, train_date, train, test_date, test, name):
         """
         Parameters
         ----------
@@ -34,14 +33,15 @@ class TS_Models:
 
         """
 
-        plt.figure(figsize=(16,4))
+        plt.figure(figsize=(16, 4))
         plt.plot(train_date, train[name], label='train')
         plt.plot(test_date, test[name], label='test')
-        plt.ylabel(name); plt.legend()
+        plt.ylabel(name)
+        plt.legend()
         plt.show()
 
-    #%% Plot autocorrelations function
-    def plot_autocor(self,name, df):
+    # %% Plot autocorrelations function
+    def plot_autocor(self, name, df):
         """
 
 
@@ -58,27 +58,29 @@ class TS_Models:
 
         """
 
-        plt.figure(figsize=(16,4))
+        plt.figure(figsize=(16, 4))
 
         # pd.plotting.autocorrelation_plot(df[name])
         # plt.title(name)
         # plt.show()
 
-        timeLags = np.arange(1,36)
+        timeLags = np.arange(1, 36)
         plt.plot([df[name].autocorr(dt) for dt in timeLags])
-        plt.title(name); plt.ylabel('autocorr'); plt.xlabel('time lags')
+        plt.title(name)
+        plt.ylabel('autocorr')
+        plt.xlabel('time lags')
         plt.show()
 
-    #%% ARIMA model
+    # %% ARIMA model
     def ARIMA(self, data):
         # fit stepwise auto-ARIMA
         stepwise_fit = pm.auto_arima(data, start_p=1, start_q=1,
-                             max_p=5, max_q=5, m=12,
-                             start_P=0, seasonal=True,
-                             d=1, D=1, trace=True,
-                             error_action='ignore',  # don't want to know if an order does not work
-                             suppress_warnings=True,  # don't want convergence warnings
-                             stepwise=True)  # set to stepwise
+                                     max_p=5, max_q=5, m=12,
+                                     start_P=0, seasonal=True,
+                                     d=1, D=1, trace=True,
+                                     error_action='ignore',  # don't want to know if an order does not work
+                                     suppress_warnings=True,  # don't want convergence warnings
+                                     stepwise=True)  # set to stepwise
 
         print(' ### Modelo ARIMA ajustado ### \n')
         print(stepwise_fit.summary())
@@ -86,8 +88,8 @@ class TS_Models:
 
         return stepwise_fit
 
-    #%% VAR MODEL
-    def VAR(self,data_diff, best_order):
+    # %% VAR MODEL
+    def VAR(self, data_diff, best_order):
         """
 
 
@@ -118,18 +120,18 @@ class TS_Models:
 
         return var, var_result
 
-    def adf_test(self,series,title=''):
+    def adf_test(self, series, title=''):
         """
         Pass in a time series and an optional title, returns an ADF report
         """
         print(f'Augmented Dickey-Fuller Test: {title}')
-        result = adfuller(series.dropna(),autolag='AIC') # .dropna() handles differenced data
+        result = adfuller(series.dropna(), autolag='AIC')  # .dropna() handles differenced data
 
-        labels = ['ADF test statistic','p-value','# lags used','# observations']
-        out = pd.Series(result[0:4],index=labels)
+        labels = ['ADF test statistic', 'p-value', '# lags used', '# observations']
+        out = pd.Series(result[0:4], index=labels)
 
-        for key,val in result[4].items():
-            out[f'critical value ({key})']=val
+        for key, val in result[4].items():
+            out[f'critical value ({key})'] = val
 
         print(out.to_string())          # .to_string() removes the line "dtype: float64"
 
@@ -142,8 +144,8 @@ class TS_Models:
             print("Fail to reject the null hypothesis")
             print("Data has a unit root and is non-stationary")
 
-    #%% Returns the order of VAR with the less AIC
-    def VAR_bestorder(self,data_diff, max_order = 5):
+    # %% Returns the order of VAR with the less AIC
+    def VAR_bestorder(self, data_diff, max_order=5):
         """
 
 
@@ -168,7 +170,7 @@ class TS_Models:
         AIC = {}
         best_aic, best_order = np.inf, 0
 
-        for i in range(1,max_order):
+        for i in range(1, max_order):
             model = VAR(endog=data_diff.values)
             model_result = model.fit(maxlags=i)
             AIC[i] = model_result.aic
@@ -181,18 +183,19 @@ class TS_Models:
 
         ### PLOT AICs ###
 
-        plt.figure(figsize=(14,5))
+        plt.figure(figsize=(14, 5))
         plt.plot(range(len(AIC)), list(AIC.values()))
-        plt.plot([best_order-1], [best_aic], marker='o', markersize=8, color="red")
-        plt.xticks(range(len(AIC)), range(1,50))
-        plt.xlabel('lags'); plt.ylabel('AIC')
+        plt.plot([best_order - 1], [best_aic], marker='o', markersize=8, color="red")
+        plt.xticks(range(len(AIC)), range(1, 50))
+        plt.xlabel('lags')
+        plt.ylabel('AIC')
         np.set_printoptions(False)
         plt.show()
 
         return best_order, best_aic
 
     #%% UTILITY FUNCTION FOR RETRIVING ARIMA PREDICTIONS ###
-    def retrive_ARIMA_prediction(self,arima_result, period, steps):
+    def retrive_ARIMA_prediction(self, arima_result, period, steps):
         """
 
 
@@ -220,15 +223,15 @@ class TS_Models:
         #init = prior_init.loc[0].tail(period).values
 
         if steps > period:
-            id_period = list(range(period))*(steps//period)
-            id_period = id_period + list(range(steps-len(id_period)))
+            id_period = list(range(period)) * (steps // period)
+            id_period = id_period + list(range(steps - len(id_period)))
         else:
             id_period = list(range(steps))
 
         #final_pred = np.zeros((steps, prior.shape[1]))
         final_pred = np.zeros((steps))
 
-        for j, (i,p) in enumerate(zip(id_period, pred)):
+        for j, (i, p) in enumerate(zip(id_period, pred)):
 
             #final_pred[j] = init[i]+p
             final_pred[j] = p
@@ -237,7 +240,7 @@ class TS_Models:
         return final_pred
 
     #%% UTILITY FUNCTION FOR RETRIVING VAR PREDICTIONS ###
-    def retrive_VAR_prediction(self,var_result, period, prior, prior_init, steps):
+    def retrive_VAR_prediction(self, var_result, period, prior, prior_init, steps):
         """
 
 
@@ -265,14 +268,14 @@ class TS_Models:
         init = prior_init.tail(period).values
 
         if steps > period:
-            id_period = list(range(period))*(steps//period)
-            id_period = id_period + list(range(steps-len(id_period)))
+            id_period = list(range(period)) * (steps // period)
+            id_period = id_period + list(range(steps - len(id_period)))
         else:
             id_period = list(range(steps))
 
         final_pred = np.zeros((steps, prior.shape[1]))
-        for j, (i,p) in enumerate(zip(id_period, pred)):
-            final_pred[j] = init[i]+p
-            init[i] = init[i]+p
+        for j, (i, p) in enumerate(zip(id_period, pred)):
+            final_pred[j] = init[i] + p
+            init[i] = init[i] + p
 
         return final_pred
